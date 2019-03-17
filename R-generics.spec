@@ -4,22 +4,23 @@
 #
 Name     : R-generics
 Version  : 0.0.2
-Release  : 6
+Release  : 7
 URL      : https://cran.r-project.org/src/contrib/generics_0.0.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/generics_0.0.2.tar.gz
 Summary  : Common S3 Generics not Provided by Base R Methods Related to
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-pkgload
-Requires: R-rlang
-Requires: R-tibble
 BuildRequires : R-pkgload
 BuildRequires : R-rlang
 BuildRequires : R-tibble
 BuildRequires : buildreq-R
 
 %description
-generics provides a number of commonly used S3 generics.
+# generics
+[![Build
+Status](https://travis-ci.org/r-lib/generics.svg?branch=master)](https://travis-ci.org/r-lib/generics)
+[![Coverage
+status](https://codecov.io/gh/r-lib/generics/branch/master/graph/badge.svg)](https://codecov.io/github/r-lib/generics?branch=master)
 
 %prep
 %setup -q -c -n generics
@@ -29,10 +30,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1543516730
+export SOURCE_DATE_EPOCH=1552860008
 
 %install
-export SOURCE_DATE_EPOCH=1543516730
+export SOURCE_DATE_EPOCH=1552860008
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -68,8 +69,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library generics|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  generics || :
 
 
 %files
@@ -94,3 +94,48 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/generics/help/paths.rds
 /usr/lib64/R/library/generics/html/00Index.html
 /usr/lib64/R/library/generics/html/R.css
+/usr/lib64/R/library/generics/tests/testthat.R
+/usr/lib64/R/library/generics/tests/testthat/helper-expect_known_cat.R
+/usr/lib64/R/library/generics/tests/testthat/helper-skip_if_below_r_version.R
+/usr/lib64/R/library/generics/tests/testthat/test-generics-extension.R
+/usr/lib64/R/library/generics/tests/testthat/test-multiple-packages.R
+/usr/lib64/R/library/generics/tests/testthat/test-s4.R
+/usr/lib64/R/library/generics/tests/testthat/test-same-rd.R
+/usr/lib64/R/library/generics/tests/testthat/test-single-package.R
+/usr/lib64/R/library/generics/tests/testthat/test-special-cases.R
+/usr/lib64/R/library/generics/tests/testthat/testGenericsExtension/DESCRIPTION
+/usr/lib64/R/library/generics/tests/testthat/testGenericsExtension/NAMESPACE
+/usr/lib64/R/library/generics/tests/testthat/testGenericsExtension/R/a.r
+/usr/lib64/R/library/generics/tests/testthat/testGenericsExtension/man/reexports.Rd
+/usr/lib64/R/library/generics/tests/testthat/testGenericsExtension/man/tidy-special.Rd
+/usr/lib64/R/library/generics/tests/testthat/testGenericsExtension/test-1.txt
+/usr/lib64/R/library/generics/tests/testthat/testMultiMethod/DESCRIPTION
+/usr/lib64/R/library/generics/tests/testthat/testMultiMethod/NAMESPACE
+/usr/lib64/R/library/generics/tests/testthat/testMultiMethod/R/a.r
+/usr/lib64/R/library/generics/tests/testthat/testMultiMethod/man/multi-method-2.Rd
+/usr/lib64/R/library/generics/tests/testthat/testMultiMethod/man/multi-method-3.Rd
+/usr/lib64/R/library/generics/tests/testthat/testMultiMethod/man/multi-method.Rd
+/usr/lib64/R/library/generics/tests/testthat/testMultiMethod/test-1.txt
+/usr/lib64/R/library/generics/tests/testthat/testMultiPackage/DESCRIPTION
+/usr/lib64/R/library/generics/tests/testthat/testMultiPackage/NAMESPACE
+/usr/lib64/R/library/generics/tests/testthat/testMultiPackage/R/a.r
+/usr/lib64/R/library/generics/tests/testthat/testMultiPackage/man/multi-method-4.Rd
+/usr/lib64/R/library/generics/tests/testthat/testMultiPackage/test-1.txt
+/usr/lib64/R/library/generics/tests/testthat/testS4Docs/DESCRIPTION
+/usr/lib64/R/library/generics/tests/testthat/testS4Docs/NAMESPACE
+/usr/lib64/R/library/generics/tests/testthat/testS4Docs/R/a.r
+/usr/lib64/R/library/generics/tests/testthat/testS4Docs/man/multi_method.Rd
+/usr/lib64/R/library/generics/tests/testthat/testS4Docs/test-1.txt
+/usr/lib64/R/library/generics/tests/testthat/testS4Docs/test-2.txt
+/usr/lib64/R/library/generics/tests/testthat/testSameRd/DESCRIPTION
+/usr/lib64/R/library/generics/tests/testthat/testSameRd/NAMESPACE
+/usr/lib64/R/library/generics/tests/testthat/testSameRd/R/a.r
+/usr/lib64/R/library/generics/tests/testthat/testSameRd/man/same_rd_name-2.Rd
+/usr/lib64/R/library/generics/tests/testthat/testSameRd/man/same_rd_name.Rd
+/usr/lib64/R/library/generics/tests/testthat/testSameRd/test-1.txt
+/usr/lib64/R/library/generics/tests/testthat/testSingleMethod/DESCRIPTION
+/usr/lib64/R/library/generics/tests/testthat/testSingleMethod/NAMESPACE
+/usr/lib64/R/library/generics/tests/testthat/testSingleMethod/R/a.r
+/usr/lib64/R/library/generics/tests/testthat/testSingleMethod/man/single-method-2.Rd
+/usr/lib64/R/library/generics/tests/testthat/testSingleMethod/man/single-method.Rd
+/usr/lib64/R/library/generics/tests/testthat/testSingleMethod/test-1.txt
