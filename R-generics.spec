@@ -4,7 +4,7 @@
 #
 Name     : R-generics
 Version  : 0.0.2
-Release  : 10
+Release  : 11
 URL      : https://cran.r-project.org/src/contrib/generics_0.0.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/generics_0.0.2.tar.gz
 Summary  : Common S3 Generics not Provided by Base R Methods Related to
