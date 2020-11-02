@@ -1,7 +1,9 @@
 # This file contains recursive sources that require this package
 R-broom
+R-dplyr
 R-joineRML
 R-keras
 R-lubridate
+R-mice
 R-recipes
 R-rsample
