@@ -1,9 +1,13 @@
 # This file contains recursive sources that require this package
 R-broom
+R-distributional
 R-dplyr
+R-flexsurv
 R-joineRML
 R-keras
 R-lubridate
+R-maxLik
 R-mice
 R-recipes
 R-rsample
+R-themis
