@@ -9,6 +9,7 @@ R-keras
 R-lubridate
 R-maxLik
 R-mice
+R-phangorn
 R-recipes
 R-rsample
 R-themis
