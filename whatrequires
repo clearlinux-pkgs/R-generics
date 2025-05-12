@@ -4,12 +4,15 @@ R-broom
 R-distributional
 R-dplyr
 R-flexsurv
+R-forecast
 R-joineRML
 R-keras
 R-lubridate
 R-maxLik
-R-mice
+R-msm
 R-phangorn
 R-recipes
 R-rsample
+R-rstatix
 R-themis
+R-tidyrules
